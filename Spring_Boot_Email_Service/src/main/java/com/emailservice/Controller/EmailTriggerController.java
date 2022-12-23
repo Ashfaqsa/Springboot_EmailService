@@ -28,10 +28,16 @@ public class EmailTriggerController {
 	{
 	
 try {
-	this.service.sendMailWithAttachMent("ashfaq786786.wwe@gmail.com","This is a body "
-			+ "attaching a dummy mail with some files"
-			+" "
-			,"Mail testing is the Subject","C:\\Users\\Ashfaq PC\\Downloads\\file.txt");
+//	this.service.sendMailWithAttachMent("ashfaq786786.wwe@gmail.com","This is a body "
+//			+ "attaching a dummy mail with some files"
+//			+" "
+//			,"Mail testing is the Subject","C:\\Users\\Ashfaq PC\\Downloads\\file.txt");
+	
+	String []to= {"ashfaq786786.wwe@gmail.com","ashfaqhacker00@gmail.com" };
+	String []bcc= {"bantg95@gmail.com"};
+	String []cc= {"hnsati365@gmail.com","harshipro776@gmail.com" };
+	this.service.sendMailWithAttachMent(to, cc, bcc, "This is a body ", "Mail testing is the Subject", "C:\\Users\\Ashfaq PC\\Downloads\\file.txt");
+	
 	System.out.println("Success");
 } catch (MessagingException e) {
 	// TODO Auto-generated catch block
